@@ -1,3 +1,30 @@
 .test {
     color: red;
   }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+  }
+
+  #dropdown {
+    padding: 8px;
+    border-radius: 5px;
+  }
+  
+  #textInput {
+    padding: 8px;
+    border-radius: 5px;
+  }
