@@ -17,14 +17,52 @@
     display: flex;
     gap: 10px;
     border-radius: 10px;
+    background-color: rgb(94, 93, 93);
+    padding: 20px;
+    margin-left: 730px;
+    margin-right: 730px;
   }
 
   #dropdown {
     padding: 8px;
     border-radius: 5px;
   }
+
+  
+  #dropdown-container {
+    position: relative;
+  }
+  
+  #dropdownBtn.fixed-width {
+    width: 150px; /* Ajustez la largeur fixe selon vos besoins */
+  }
+  
+  #dropdownOptions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  #dropdownOptions .btn {
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+  }
+  
+  #dropdownOptions .btn.fixed-width {
+    width: 150px; /* Ajustez la largeur fixe selon vos besoins */
+  }
   
   #textInput {
     padding: 8px;
     border-radius: 5px;
+  }
+
+  .btn.selected {
+    background-color: #6289f5; /* Changer la couleur de fond en bleu */
+    color: white; /* Changer la couleur du texte en blanc */
   }
