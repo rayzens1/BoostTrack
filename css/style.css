@@ -13,6 +13,40 @@
     background: linear-gradient(to right, #091428, #0A1428);
   }
 
+  .navbar {
+    position: fixed; /* Barre de navigation fixée */
+    left: 0; /* Collée à gauche */
+    top: 0; /* Collée en haut */
+    width: 110px; /* Largeur de la barre de navigation */
+    height: 100%; /* Hauteur de la barre de navigation (100% de la hauteur de la fenêtre) */
+    background-color: #333; /* Couleur de fond de la barre de navigation */
+}
+
+/* Style de la liste non ordonnée (ul) dans la barre de navigation */
+.navbar ul {
+    list-style: none; /* Supprime les puces de liste */
+    padding: 0; /* Supprime le rembourrage */
+}
+
+/* Style des éléments de liste (li) dans la barre de navigation */
+.navbar li {
+    padding: 10px 0; /* Espacement vertical des éléments de la liste */
+}
+
+/* Style des liens (a) dans la barre de navigation */
+.navbar a {
+    display: block; /* Les liens occupent toute la largeur de la barre de navigation */
+    text-decoration: none; /* Supprime la décoration de texte par défaut */
+    color: #fff; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne des liens */
+    transition: background-color 0.3s; /* Animation de transition pour le changement de couleur au survol */
+}
+
+/* Style des liens au survol */
+.navbar a:hover {
+    background-color: #555; /* Couleur de fond au survol */
+}
+
   .container {
     display: flex;
     gap: 10px;
