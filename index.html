@@ -9,23 +9,29 @@
 </head>
 <body>
   <div class="container d-flex justify-content-center align-items-center flex-align">
-    <div id="dropdown-container" class="d-flex flex-align align-items-center">
-      <button class="btn btn-primary fixed-width" id="dropdownBtn">Europe West</button>
-      <div id="dropdownOptions" class="mt-2 position-absolute" style="display: none; width: 100%;">
-        <button class="btn btn-secondary fixed-width selected" data-value="EUW">Europe West</button>
-        <button class="btn btn-secondary" data-value="NA">North America</button>
-        <button class="btn btn-secondary" data-value="EUNE">Europe North Est</button>
-        <button class="btn btn-secondary" data-value="OCE">Oceania</button>
-        <button class="btn btn-secondary" data-value="RU">Russia</button>
-        <button class="btn btn-secondary" data-value="KR">Korea</button>
-        <button class="btn btn-secondary" data-value="BR">Brazil</button>
-        <button class="btn btn-secondary" data-value="JP">Japan</button>
-        <button class="btn btn-secondary" data-value="TR">Turky</button>
-        <button class="btn btn-secondary" data-value="LAN">Latin America North</button>
-        <button class="btn btn-secondary" data-value="LAS">Latin America South</button>
+    <div class="label">
+      <div class="labeltextbtn">Region</div>
+      <div id="dropdown-container" class="d-flex flex-align align-items-center">
+        <button class="btn btn-primary fixed-width" id="dropdownBtn">Europe West</button>
+       <div id="dropdownOptions" class="mt-2 position-absolute" style="display: none; width: 100%;">
+         <button class="btn btn-secondary fixed-width selected" data-value="EUW">Europe West</button>
+         <button class="btn btn-secondary" data-value="NA">North America</button>
+         <button class="btn btn-secondary" data-value="EUNE">Europe North Est</button>
+         <button class="btn btn-secondary" data-value="OCE">Oceania</button>
+         <button class="btn btn-secondary" data-value="RU">Russia</button>
+         <button class="btn btn-secondary" data-value="KR">Korea</button>
+          <button class="btn btn-secondary" data-value="BR">Brazil</button>
+          <button class="btn btn-secondary" data-value="JP">Japan</button>
+         <button class="btn btn-secondary" data-value="TR">Turky</button>
+          <button class="btn btn-secondary" data-value="LAN">Latin America North</button>
+          <button class="btn btn-secondary" data-value="LAS">Latin America South</button>
+       </div>
       </div>
     </div>
-    <input type="text" id="textInput" placeholder="Game Username">
+    <div class="label">
+      <div class="labeltext">Search</div>
+      <input type="text" id="textInput" placeholder="Game Username">
+    </div>
   </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       <script src="script.js"></script>
