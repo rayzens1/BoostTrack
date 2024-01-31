@@ -23,3 +23,22 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
+
+  document.getElementById('textInput').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      handleEnterKeyPress();
+    }
+  });
+  
+  function handleEnterKeyPress() {
+    const userInput = document.getElementById('textInput').value;
+
+    if (userInput.trim() !== '') {
+      console.log('Saisie dans l\'entrée texte:', userInput);
+    } else {
+      console.log('Le champ est vide. Veuillez entrer du texte.');
+    }
+  
+    // Ajoutez ici le code supplémentaire que vous souhaitez exécuter avec la saisie utilisateur
+  }
