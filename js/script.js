@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('dropdownOptions').style.display = 'none';
       });
     }
-  });
+});
 
   document.getElementById('textInput').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
