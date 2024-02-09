@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('dropdownOptions').style.display = 'none';
       });
     }
-});
+  });
 
   document.getElementById('textInput').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (userInput.trim() !== '') {
       console.log('Saisie dans l\'entrée texte:', userInput);
+      document.getElementById("textdebug").innerHTML = String(userInput);
     } else {
       console.log('Le champ est vide. Veuillez entrer du texte.');
     }
