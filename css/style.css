@@ -23,7 +23,7 @@ body {
   }
 
 /* Style de la liste non ordonnée (ul) dans la barre de navigation */
-.navbarn ul {
+.navbarn ul  {
     list-style: none; /* Supprime les puces de liste */
     display: grid;
     padding: 0; /* Supprime le rembourrage */
@@ -42,6 +42,17 @@ body {
     color: #fff; /* Couleur du texte */
     padding: 10px 20px; /* Espacement interne des liens */
     transition: background-color 0.3s; /* Animation de transition pour le changement de couleur au survol */
+  }
+
+  .navbar-menu {
+    position: fixed;
+    bottom: 0;
+    margin: 0 20px 20px 0;
+    padding: 10px;
+    background-color: #666; /* Choisissez une couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none;
+    cursor: pointer;
   }
 
   .navbar-logo {
