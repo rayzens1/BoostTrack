@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
         // Applique la classe 'selected' au bouton sélectionné
         this.classList.add('selected');
-  
+
         // Met à jour le texte du bouton principal et masque les options
         document.getElementById('dropdownBtn').textContent = this.textContent;
         document.getElementById('dropdownOptions').style.display = 'none';
