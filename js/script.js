@@ -34,23 +34,30 @@ document.addEventListener('DOMContentLoaded', function () {
   function handleEnterKeyPress() {
     const gameName = document.getElementById('textInput').value;
     if (gameName.trim() !== '') {
-      console.log('Saisie dans l\'entrée texte:', gameName);
-      document.getElementById("textdebug").innerHTML = String(gameName);
-      const regionTag = document.getElementById('dropdownBtn').dataset.value; 
 
-      fetch(`https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${gameName}/${regionTag}?api_key=RGAPI-6d1feb40-bef5-4d46-980a-48bcd17e33dd`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('HTTP Hatası: ' + response.status);
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Alınan veri:', data);
-      })
-      .catch(error => {
-        console.error('Hata:', error);
-      });
+      if(gameName.includes("#")) {
+        console.log('Saisie dans l\'entrée texte:', gameName);
+        document.getElementById("textdebug").innerHTML = String(gameName);
+        const regionTag = document.getElementById('dropdownBtn').dataset.value; 
+  
+        fetch(`https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${gameName}/${regionTag}?api_key=RGAPI-6d1feb40-bef5-4d46-980a-48bcd17e33dd`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('HTTP Hatası: ' + response.status);
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Alınan veri:', data);
+        })
+        .catch(error => {
+          console.error('Hata:', error);
+        });
+        
+      } else {
+        console.log('Connard le #');
+      }
+
     } else {
       console.log('Le champ est vide. Veuillez entrer du texte.');
     }
