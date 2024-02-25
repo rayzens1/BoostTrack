@@ -32,15 +32,19 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   
   function handleEnterKeyPress() {
-    const gameName = document.getElementById('textInput').value;
-    if (gameName.trim() !== '') {
+    const userInput = document.getElementById('textInput').value;
+    if (userInput.trim() !== '') {
 
-      if(gameName.includes("#")) {
-        console.log('Saisie dans l\'entrée texte:', gameName);
-        document.getElementById("textdebug").innerHTML = String(gameName);
-        const regionTag = document.getElementById('dropdownBtn').dataset.value; 
+      if(userInput.includes("#")) {
+        console.log('Saisie dans l\'entrée texte:', userInput);
+        document.getElementById("textdebug").innerHTML = String(userInput);
+        const userInputSplit = userInput.split("#")
+        const gameName = userInputSplit[0];
+        const gameTag = userInputSplit[1];
+        console.log(userInputSplit);
+        var regionName = document.getElementById('dropdownBtn').dataset.value;
   
-        fetch(`https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${gameName}/${regionTag}?api_key=RGAPI-6d1feb40-bef5-4d46-980a-48bcd17e33dd`)
+        fetch(`https://${regionName}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${gameName}/${gameTag}?api_key=RGAPI-6d1feb40-bef5-4d46-980a-48bcd17e33dd`)
         .then(response => {
           if (!response.ok) {
             throw new Error('HTTP Hatası: ' + response.status);
