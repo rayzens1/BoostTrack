@@ -36,27 +36,35 @@ document.addEventListener('DOMContentLoaded', function () {
     if (userInput.trim() !== '') {
 
       if(userInput.includes("#")) {
-        console.log('Saisie dans l\'entrée texte:', userInput);
-        document.getElementById("textdebug").innerHTML = String(userInput);
         const userInputSplit = userInput.split("#")
         const gameName = userInputSplit[0];
         const gameTag = userInputSplit[1];
         console.log(userInputSplit);
-        var regionName = document.getElementById('dropdownBtn').dataset.value;
-  
-        fetch(`http://localhost:4000/past5Games?gameName=${gameName}&gameTag=${gameTag}&regionName=${regionName}`)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('HTTP response: ' + response.status);
-          }
-          return response.json();
-        })
-        .then(data => {
-          console.log('Data:', data);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
+
+        if(gameName.trim() !== '' && gameTag.trim() !== '') {
+
+          console.log('Saisie dans l\'entrée texte:', userInput);
+          document.getElementById("textdebug").innerHTML = String(userInput);
+
+          var regionName = document.getElementById('dropdownBtn').dataset.value;
+    
+          fetch(`http://localhost:4000/past5Games?gameName=${gameName}&gameTag=${gameTag}&regionName=${regionName}`)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('HTTP response: ' + response.status);
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('Data:', data);
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+
+        } else {
+          console.log("Petit oublie dans le nom ou le tag ???")
+        }
         
       } else {
         console.log('Connard le #');
