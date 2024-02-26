@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           var regionName = document.getElementById('dropdownBtn').dataset.value;
     
-          fetch(`http://localhost:4000/past5Games?gameName=${gameName}&gameTag=${gameTag}&regionName=${regionName}`)
+          fetch(`http://localhost:4000/playerPUUID?gameName=${gameName}&gameTag=${gameTag}&regionName=${regionName}`)
           .then(response => {
             if (!response.ok) {
               throw new Error('HTTP response: ' + response.status);

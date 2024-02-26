@@ -16,7 +16,7 @@ function getPlayerPUUID(gameName, gameTag, regionName) {
         }).catch(err => err)
 }
 
-app.get('/past5Games', async (req, res) => {
+app.get('/playerPUUID', async (req, res) => {
     const gameName = req.query.gameName;
     const gameTag = req.query.gameTag;
     const regionName = req.query.regionName;
