@@ -44,18 +44,18 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(userInputSplit);
         var regionName = document.getElementById('dropdownBtn').dataset.value;
   
-        fetch(`https://${regionName}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${gameName}/${gameTag}?api_key=RGAPI-6d1feb40-bef5-4d46-980a-48bcd17e33dd`)
+        fetch(`http://localhost:4000/past5Games?gameName=${gameName}&gameTag=${gameTag}&regionName=${regionName}`)
         .then(response => {
           if (!response.ok) {
-            throw new Error('HTTP Hatası: ' + response.status);
+            throw new Error('HTTP response: ' + response.status);
           }
           return response.json();
         })
         .then(data => {
-          console.log('Alınan veri:', data);
+          console.log('Data:', data);
         })
         .catch(error => {
-          console.error('Hata:', error);
+          console.error('Error:', error);
         });
         
       } else {
